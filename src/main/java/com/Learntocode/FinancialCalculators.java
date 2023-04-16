@@ -58,12 +58,27 @@ public static void chooseCalculator() {
 
 
     public static void futureCalculator(){
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("Thank you for choosing Future Calculator");
+        System.out.println("Please Insert Deposit Amount:");
+        Float deposit = input.nextFloat();
 
 
+        System.out.println("Thank you, Now input your Interest Rate:");
+        Float interestRate = input.nextFloat();
 
 
+        System.out.println("Thank you, Lastly PLease Enter How Long You Will Save for:(In years) :");
+        Float years = input.nextFloat();
 
+        Float futureValue = deposit * (float) Math.pow(1 + interestRate, years);
+        Float  totalInterest = futureValue - deposit;
+
+        System.out.println(futureValue +"Is tour future Value!");
+        System.out.println("Total Interest Earned" +totalInterest );
     }
+
 
 
 
